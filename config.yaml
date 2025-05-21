@@ -1,0 +1,36 @@
+# Message Fetching Settings
+# -------------------------
+# Settings related to fetching messages from Telegram
+message_fetching:
+  default_limit: 1500  # Default number of messages to fetch
+
+# AI Model Settings
+# ----------------
+# Settings for AI model usage and configuration via OpenRouter
+
+openrouter:
+  system:
+    prompt:
+      - "You are a helpful assistant that can summarize Telegram messages with conversation context."
+  models:
+    openai-o4-mini: "openai/o4-mini-high"  # Default OpenRouter model to use
+    anthropic-3.7-sonnet: "anthropic/claude-3.7-sonnet"
+    gemini-2.5-flash-preview-05-20: "google/gemini-2.5-flash-preview-05-20"
+
+default_prompt:
+  system:
+    prompt:
+      - "You are a helpful assistant that can summarize Telegram messages with conversation context."
+      - "You are given a list of messages and a conversation context."
+      - "You need to summarize the messages with the conversation context."
+      - "You need to return the summary in a structured format."
+  
+# Telegram Client Settings
+# -----------------------
+# Configuration for the Telegram client
+telegram_client:
+  system_version: "4.16.30-vxCUSTOM"
+  app_version: "1.0.0"
+  device_model: "iPhone 15 Pro Max"
+  system_lang_code: "en"
+  lang_code: "en" 
