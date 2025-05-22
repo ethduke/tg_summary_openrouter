@@ -59,6 +59,7 @@ DEFAULT_MESSAGE_LIMIT = CONFIG.get('message_fetching', {}).get('default_limit', 
 
 # Define default prompts in case files are not found
 DEFAULT_PROMPT = CONFIG.get('default_prompt', {}).get('system', {}).get('prompt', [])
+PROMPT_TEMPLATE_NAME = CONFIG.get('default_prompt', {}).get('prompt_template_name', 'summary_prompt')
 
 # Load prompt templates from markdown files
 SUMMARY_PROMPT_TEMPLATE = get_prompt("summary_prompt", DEFAULT_PROMPT)
@@ -66,6 +67,8 @@ OVERALL_PROMPT_TEMPLATE = get_prompt("overall_prompt", DEFAULT_PROMPT)
 PARTICIPANT_PROMPT_TEMPLATE = get_prompt("participant_prompt", DEFAULT_PROMPT)
 UNIFIED_PROMPT_TEMPLATE = get_prompt("unified_prompt", DEFAULT_PROMPT)
 ADDITIONAL_PROMPT_TEMPLATE = get_prompt("additional_prompt", DEFAULT_PROMPT)
+
+PROMPT_TEMPLATE = get_prompt(PROMPT_TEMPLATE_NAME, DEFAULT_PROMPT)
 
 # Telegram client configuration
 def get_telegram_client_config() -> Dict[str, str]:

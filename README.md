@@ -59,6 +59,7 @@ To customize prompts:
 1. Save as the relevant `.md` file in `data/prompts/`
 2. Your changes will be automatically used when running the tool
 3. Use template variables like `{participants}` and `{messages}` in your prompts
+4. In your config.yaml file, set the `prompt_template_name` under `default_prompt` to match your preferred prompt file name (without the .md extension). For example, if you want to use summary_prompt.md, set it to 'summary_prompt'
 
 ## Configuration
 

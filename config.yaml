@@ -24,6 +24,8 @@ default_prompt:
       - "You are given a list of messages and a conversation context."
       - "You need to summarize the messages with the conversation context."
       - "You need to return the summary in a structured format."
+  prompt_template_name: "overall_prompt"
+
   
 # Telegram Client Settings
 # -----------------------

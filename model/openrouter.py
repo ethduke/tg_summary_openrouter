@@ -7,7 +7,7 @@ This module provides functionality to generate summaries using AI models via Ope
 import logging
 import httpx
 from utils.config import (
-    SUMMARY_PROMPT_TEMPLATE,
+    PROMPT_TEMPLATE,
     OPENROUTER_API_KEY,
     DEFAULT_MODEL
 )
@@ -18,7 +18,7 @@ logger = logging.getLogger("TelegramMessageAnalyzer")
 async def generate_summary_with_ai(
     messages_text: str,
     model: str = DEFAULT_MODEL,
-    prompt_template: str = SUMMARY_PROMPT_TEMPLATE
+    prompt_template: str = PROMPT_TEMPLATE
 ) -> str:
     """
     Generate a summary using OpenRouter API.
